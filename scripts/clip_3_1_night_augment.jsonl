@@ -1,0 +1,1 @@
+{"name": "ex_3_night_augmentation", "prompt_path": "../assets/other_av_assets/clip_3_1_night_augment.txt", "video_path": "../assets/other_av_assets/clip_3_1.mp4", "guidance": 3, "edge": {"control_weight": 0.5}, "depth": {"control_weight": 1.0}}

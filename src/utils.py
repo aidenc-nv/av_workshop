@@ -112,9 +112,8 @@ def parse_config_from_filename(filename: str) -> Optional[Dict[str, Any]]:
 
 def index_videos_to_csv(
     generation_location: str = "outputs/omniverse_generations_av",
-    output_csv: str = "outputs/omniverse_generations_av/video_index.csv",
     recursive: bool = False,
-) -> None:
+):
     """
     Walk through `generation_location`, parse each video filename according to the
     naming convention, and write the results to a CSV.
@@ -123,8 +122,6 @@ def index_videos_to_csv(
         filename, path, name, weather, guidance, edge, seg, seg_mask, vis, depth
     """
     base_dir = Path(generation_location).resolve()
-    output_csv_path = Path(output_csv)
-    output_csv_path.parent.mkdir(parents=True, exist_ok=True)
 
     if not base_dir.exists():
         raise FileNotFoundError(f"Generation directory not found: {base_dir}")
@@ -137,12 +134,22 @@ def index_videos_to_csv(
     rows: List[Dict[str, Any]] = []
 
     for video_path in video_iter:
-        parsed = parse_config_from_filename(video_path.name)
+        parsed = parse_config_from_filename(video_path.name[:-4])
         if parsed is None:
             continue
 
         parsed["path"] = str(video_path.resolve())
         rows.append(parsed)
+    
+    return rows
+
+
+
+
+def write_to_csv(rows, output_csv: str = "outputs/omniverse_generations_av/video_index.csv"):
+
+    output_csv_path = Path(output_csv)
+    output_csv_path.parent.mkdir(parents=True, exist_ok=True)
 
     fieldnames = ["filename", "path", "name", "weather", "guidance",
                   "edge", "seg", "seg_mask", "vis", "depth"]
@@ -163,11 +170,19 @@ if __name__ == "__main__":
     print(parse_config_from_filename(filename))
 
     # configuration_utils()
-    configuration_utils()
+    # configuration_utils()
+
+
 
     # After you’ve generated videos with the naming convention:
-    # index_videos_to_csv(
-    #     generation_location="outputs/omniverse_generations_av",
-    #     output_csv="outputs/omniverse_generations_av/video_index.csv",
-    #     recursive=True,  # set False if you only want the top-level folder
-    # )
+    rows1 = index_videos_to_csv(
+        generation_location="outputs/av_realistic_results",
+        recursive=True,  # set False if you only want the top-level folder
+    )
+    rows2 = index_videos_to_csv(
+        generation_location="outputs/omniverse_generations_av_results",
+        recursive=True,  # set False if you only want the top-level folder
+    )
+
+    rows = rows1 + rows2
+    write_to_csv(rows, output_csv="outputs/av_realistic_index.csv")

@@ -1,0 +1,1 @@
+{"name": "ex_2_lighting_augmentation", "prompt_path": "../assets/other_av_assets/clip_1_2_lighting_augment.txt", "video_path": "../assets/other_av_assets/clip_1_2.mp4", "guidance": 3, "edge": {"control_weight": 1.0}, "depth": {"control_weight": 0.9}}

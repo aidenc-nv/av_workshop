@@ -1,0 +1,1 @@
+{"name": "ex_1_fog_augmentation", "prompt_path": "../assets/other_av_assets/clip_1_1_fog_augment.txt", "video_path": "../assets/other_av_assets/clip_2_1.mp4", "guidance": 7, "edge": {"control_weight": 0.5}, "depth": {"control_weight": 1.0}}
