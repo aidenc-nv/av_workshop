@@ -1,0 +1,985 @@
+[11-12 22:01:36|DEBUG|cosmos_transfer2_5/packages/cosmos-oss/cosmos_oss/init.py:176:init_output_dir] Flags(internal=False, smoke=False, verbose=False, experimental_checkpoints=False)
+[11-12 22:01:37|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpoint_db.py:171:path] Downloading checkpoint nvidia/Cosmos-Guardrail1(9c7b7da4-2d95-45bb-9cb8-2eed954e9736)
+[11-12 22:01:37|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpoint_db.py:131:_download] Downloading checkpoint from Hugging Face with {'repo_id': 'nvidia/Cosmos-Guardrail1', 'repo_type': 'model', 'revision': 'd6d4bfa899a71454a700907664f3e88f503950cf', 'allow_patterns': ['*']}
+[11-12 22:01:48|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/env_parsers/env_parser.py:86:get_val_dict] getting val dict of CredentialEnvParser
+[11-12 22:01:48|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/env_parsers/env_parser.py:86:get_val_dict] getting val dict of CredentialEnvParser
+[11-12 22:01:49|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/visualize/video.py:31:<module>] No module named 'ffmpegcv'
+[11-12 22:01:50|CRITICAL|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/checkpointer/dcp.py:188:<module>] for the back comptiable pytorch! New DefaultLoadPlanner class is created.
+[11-12 22:01:50|DEBUG|cosmos_transfer2_5/cosmos_transfer2/inference.py:46:__init__] SetupArguments(output_dir=PosixPath('outputs/color_change') model='edge' checkpoint_path='/home/nvidia/.cache/huggingface/hub/models--nvidia--Cosmos-Transfer2.5-2B/snapshots/bd963eabcfc2d61dc4ea365cacf41d45ac480aa5/general/edge/ecd0ba00-d598-4f94-aa09-e8627899c431_ema_bf16.pt' experiment='edge_720p_t24_spaced_layer4_cr1pt1_sdev2_lowsigma0.05_nonuniform_hqv3p1_20250714_64N_rectified_flow_mock_data' config_file='cosmos_transfer2/_src/predict2/configs/video2world/config.py' context_parallel_size=1 disable_guardrails=False offload_guardrail_models=True keep_going=True profile=False benchmark=False compile_tokenizer=<CompileMode.NONE: 'none'> enable_parallel_tokenizer=False parallel_tokenizer_grid=(-1, -1))(['edge'])
+[11-12 22:01:50|DEBUG|cosmos_transfer2_5/cosmos_transfer2/inference.py:59:__init__] Loading keys for batch hints self.batch_hint_keys=['edge']
+[11-12 22:01:50|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/blocklist/blocklist.py:62:__init__] Loaded 383 words/phrases from blocklist
+[11-12 22:01:50|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/blocklist/blocklist.py:63:__init__] Whitelisted 1 words/phrases from whitelist
+[11-12 22:01:50|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/blocklist/blocklist.py:64:__init__] Loaded 1414 exact match words/phrases from blocklist
+[11-12 22:01:52|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/qwen3guard/qwen3guard.py:55:__init__] Moved Qwen3Guard model to CPU
+[11-12 22:01:58|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/video_content_safety_filter/video_content_safety_filter.py:79:__init__] Moved video content safety filter to CPU
+[11-12 22:01:58|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/face_blur_filter/retinaface_utils.py:103:load_model] Loading pretrained model from /home/nvidia/.cache/huggingface/hub/models--nvidia--Cosmos-Guardrail1/snapshots/d6d4bfa899a71454a700907664f3e88f503950cf/face_blur_filter/Resnet50_Final.pth
+[11-12 22:01:59|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/face_blur_filter/retinaface_utils.py:93:_remove_prefix] Removing prefix 'module.'
+[11-12 22:01:59|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/face_blur_filter/retinaface_utils.py:83:_check_keys] Missing keys:0
+[11-12 22:01:59|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/face_blur_filter/retinaface_utils.py:84:_check_keys] Unused checkpoint keys:0
+[11-12 22:01:59|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/face_blur_filter/retinaface_utils.py:85:_check_keys] Used keys:456
+[11-12 22:01:59|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/face_blur_filter/face_blur_filter.py:89:__init__] Moved face blur filter to CPU
+[11-12 22:01:59|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/datasets/augmentor_provider.py:35:augmentor_register] registering video_basic_augmentor_v1...
+[11-12 22:01:59|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/datasets/augmentor_provider.py:35:augmentor_register] registering video_basic_augmentor_v2...
+[11-12 22:01:59|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/datasets/augmentor_provider.py:35:augmentor_register] registering image_basic_augmentor...
+[11-12 22:01:59|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/datasets/augmentor_provider.py:35:augmentor_register] registering video_basic_augmentor_v1_with_control...
+[11-12 22:01:59|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/datasets/augmentor_provider.py:35:augmentor_register] registering video_basic_augmentor_v2_with_control...
+[11-12 22:01:59|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/datasets/augmentor_provider.py:35:augmentor_register] registering image_basic_augmentor_with_control...
+[11-12 22:01:59|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/datasets/augmentor_provider.py:35:augmentor_register] registering video_basic_augmentor_v2_with_control_and_image_context...
+[11-12 22:01:59|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/datasets/augmentor_provider.py:35:augmentor_register] registering video_basic_augmentor_with_control_input...
+[11-12 22:01:59|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/datasets/augmentor_provider.py:35:augmentor_register] registering hdmap_augmentor_for_local_datasets...
+[11-12 22:01:59|CRITICAL|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/config_helper.py:189:import_all_modules_from_package] Reloading all modules from package cosmos_transfer2._src.transfer2.configs.vid2vid_transfer.experiment
+[11-12 22:01:59|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/config_helper.py:203:import_modules_recursively] Skipping module _submit as it starts with an underscore
+[11-12 22:01:59|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/config_helper.py:207:import_modules_recursively] Reloading module cosmos_transfer2._src.transfer2.configs.vid2vid_transfer.experiment.exp_large_scale
+[11-12 22:01:59|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/config_helper.py:207:import_modules_recursively] Reloading module cosmos_transfer2._src.transfer2.configs.vid2vid_transfer.experiment.exp_small_overfit
+[11-12 22:01:59|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/config_helper.py:207:import_modules_recursively] Reloading module cosmos_transfer2._src.transfer2.configs.vid2vid_transfer.experiment.experiment_list
+[11-12 22:01:59|CRITICAL|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/config_helper.py:189:import_all_modules_from_package] Reloading all modules from package cosmos_transfer2._src.transfer2.configs.vid2vid_transfer.experiment_av
+[11-12 22:01:59|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/config_helper.py:203:import_modules_recursively] Skipping module _submit as it starts with an underscore
+[11-12 22:01:59|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/config_helper.py:207:import_modules_recursively] Reloading module cosmos_transfer2._src.transfer2.configs.vid2vid_transfer.experiment_av.exp_large_scale
+[11-12 22:01:59|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/config_helper.py:207:import_modules_recursively] Reloading module cosmos_transfer2._src.transfer2.configs.vid2vid_transfer.experiment_av.experiment_list
+[11-12 22:01:59|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/utils/model_loader.py:62:load_model_from_checkpoint] Overriding config checkpoint path with: /home/nvidia/.cache/huggingface/hub/models--nvidia--Cosmos-Transfer2.5-2B/snapshots/bd963eabcfc2d61dc4ea365cacf41d45ac480aa5/general/edge/ecd0ba00-d598-4f94-aa09-e8627899c431_ema_bf16.pt
+[11-12 22:01:59|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/misc.py:152:set_random_seed] Using random seed 0.
+[11-12 22:01:59|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/utils/model_loader.py:82:load_model_from_checkpoint] Loading model from /home/nvidia/.cache/huggingface/hub/models--nvidia--Cosmos-Transfer2.5-2B/snapshots/bd963eabcfc2d61dc4ea365cacf41d45ac480aa5/general/edge/ecd0ba00-d598-4f94-aa09-e8627899c431_ema_bf16.pt
+[11-12 22:01:59|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/models/text2world_model_rectified_flow.py:131:__init__] DiffusionModel: precision torch.bfloat16
+[11-12 22:01:59|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpoint_db.py:171:path] Downloading checkpoint Wan2.1/vae(685afcaa-4de2-42fe-b7b9-69f7a2dee4d8)
+[11-12 22:01:59|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpoint_db.py:96:_download] Downloading checkpoint file from Hugging Face with {'repo_id': 'nvidia/Cosmos-Predict2.5-2B', 'repo_type': 'model', 'revision': '6787e176dce74a101d922174a95dba29fa5f0c55', 'filename': 'tokenizer.pth'}
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/tokenizers/wan2pt1.py:669:_video_vae] loading /home/nvidia/.cache/huggingface/hub/models--nvidia--Cosmos-Predict2.5-2B/snapshots/6787e176dce74a101d922174a95dba29fa5f0c55/tokenizer.pth
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/misc.py:268:__exit__] Time spent on DiffusionModel: set_up_tokenizer: 0.5528 seconds
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/conditioner.py:432:__init__] Initialized embedder #0-fps: 
+ ReMapkey 
+	input key: fps
+	Param count: 0 
+	Trainable: None
+	Dropout rate: 0.0
+	Output key: fps 
+	Dtype: None
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/conditioner.py:432:__init__] Initialized embedder #1-padding_mask: 
+ ReMapkey 
+	input key: padding_mask
+	Param count: 0 
+	Trainable: None
+	Dropout rate: 0.0
+	Output key: padding_mask 
+	Dtype: None
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/conditioner.py:432:__init__] Initialized embedder #2-text: 
+ TextAttr 
+	input key: ['t5_text_embeddings']
+	Param count: 0 
+	Trainable: None
+	Dropout rate: 0.2
+	Output key: [crossattn_emb]
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/conditioner.py:432:__init__] Initialized embedder #3-use_video_condition: 
+ BooleanFlag 
+	input key: fps
+	Param count: 0 
+	Trainable: None
+	Dropout rate: 0.0
+	Output key: use_video_condition 
+	 This is a boolean flag
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/conditioner.py:432:__init__] Initialized embedder #4-control_input_edge: 
+ ReMapkey 
+	input key: control_input_edge
+	Param count: 0 
+	Trainable: None
+	Dropout rate: 0.0
+	Output key: control_input_edge 
+	Dtype: None
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/conditioner.py:432:__init__] Initialized embedder #5-control_input_vis: 
+ ReMapkey 
+	input key: control_input_vis
+	Param count: 0 
+	Trainable: None
+	Dropout rate: 0.0
+	Output key: control_input_vis 
+	Dtype: None
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/conditioner.py:432:__init__] Initialized embedder #6-control_input_depth: 
+ ReMapkey 
+	input key: control_input_depth
+	Param count: 0 
+	Trainable: None
+	Dropout rate: 0.0
+	Output key: control_input_depth 
+	Dtype: None
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/conditioner.py:432:__init__] Initialized embedder #7-control_input_seg: 
+ ReMapkey 
+	input key: control_input_seg
+	Param count: 0 
+	Trainable: None
+	Dropout rate: 0.0
+	Output key: control_input_seg 
+	Dtype: None
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/conditioner.py:432:__init__] Initialized embedder #8-control_input_inpaint: 
+ ReMapkey 
+	input key: control_input_inpaint
+	Param count: 0 
+	Trainable: None
+	Dropout rate: 0.0
+	Output key: control_input_inpaint 
+	Dtype: None
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/conditioner.py:432:__init__] Initialized embedder #9-control_input_edge_mask: 
+ ReMapkey 
+	input key: control_input_edge_mask
+	Param count: 0 
+	Trainable: None
+	Dropout rate: 0.0
+	Output key: control_input_edge_mask 
+	Dtype: None
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/conditioner.py:432:__init__] Initialized embedder #10-control_input_vis_mask: 
+ ReMapkey 
+	input key: control_input_vis_mask
+	Param count: 0 
+	Trainable: None
+	Dropout rate: 0.0
+	Output key: control_input_vis_mask 
+	Dtype: None
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/conditioner.py:432:__init__] Initialized embedder #11-control_input_depth_mask: 
+ ReMapkey 
+	input key: control_input_depth_mask
+	Param count: 0 
+	Trainable: None
+	Dropout rate: 0.0
+	Output key: control_input_depth_mask 
+	Dtype: None
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/conditioner.py:432:__init__] Initialized embedder #12-control_input_seg_mask: 
+ ReMapkey 
+	input key: control_input_seg_mask
+	Param count: 0 
+	Trainable: None
+	Dropout rate: 0.0
+	Output key: control_input_seg_mask 
+	Dtype: None
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/conditioner.py:432:__init__] Initialized embedder #13-control_input_inpaint_mask: 
+ ReMapkey 
+	input key: control_input_inpaint_mask
+	Param count: 0 
+	Trainable: None
+	Dropout rate: 0.0
+	Output key: control_input_inpaint_mask 
+	Dtype: None
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1489:build_pos_embed] Building positional embedding with rope3d class, impl <class 'cosmos_transfer2._src.predict2.networks.minimal_v4_dit.VideoRopePosition3DEmb'>
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:754:__init__] Using AdaLN LoRA Flag:  True. We enable bias if no AdaLN LoRA for backward compatibility.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1669:enable_selective_checkpoint] Enable selective checkpoint with predict2_2b_720_aggressive, for every 1 blocks. Total blocks: 28
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 0
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 1
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 2
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 3
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 4
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 5
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 6
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 7
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 8
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 9
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 10
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 11
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 12
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 13
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 14
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 15
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 16
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 17
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 18
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 19
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 20
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 21
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 22
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 23
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 24
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 25
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 26
+[11-12 22:02:00|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 27
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is None and using 16 heads with a dimension of 128.
+[11-12 22:02:00|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:335:__init__] Setting up Attention. Query dim is 2048, context_dim is 1024 and using 16 heads with a dimension of 128.
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1669:enable_selective_checkpoint] Enable selective checkpoint with predict2_2b_720_aggressive, for every 1 blocks. Total blocks: 28
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 0
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 1
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 2
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 3
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 4
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 5
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 6
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 7
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 8
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 9
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 10
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 11
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 12
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 13
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 14
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 15
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 16
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 17
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 18
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 19
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 20
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 21
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 22
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 23
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 24
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 25
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 26
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 27
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1669:enable_selective_checkpoint] Enable selective checkpoint with predict2_2b_720_aggressive, for every 1 blocks. Total blocks: 4
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 0
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 1
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 2
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/networks/minimal_v4_dit.py:1675:enable_selective_checkpoint] Enable selective checkpoint for block 3
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/misc.py:268:__exit__] Time spent on meta to cuda and broadcast model states: 0.1046 seconds
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/misc.py:268:__exit__] Time spent on Creating PyTorch model: 1.0833 seconds
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/misc.py:268:__exit__] Time spent on Creating PyTorch model and ema if enabled: 1.0911 seconds
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/misc.py:279:wrapper] Time spent on DiffusionModel: set_up_model: 1.0917 seconds
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/models/vid2vid_model_control_vace_rectified_flow.py:403:freeze_base_model] 
+Freezing base model
+
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/models/vid2vid_model_control_vace_rectified_flow.py:605:load_base_model] Done loading the base model checkpoint.
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/models/vid2vid_model_control_vace_rectified_flow.py:366:copy_weights_to_control_branch] ======Copying base model's 0-th block weight to control net's 0-th block
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/models/vid2vid_model_control_vace_rectified_flow.py:366:copy_weights_to_control_branch] ======Copying base model's 1-th block weight to control net's 1-th block
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/models/vid2vid_model_control_vace_rectified_flow.py:366:copy_weights_to_control_branch] ======Copying base model's 2-th block weight to control net's 2-th block
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/models/vid2vid_model_control_vace_rectified_flow.py:366:copy_weights_to_control_branch] ======Copying base model's 3-th block weight to control net's 3-th block
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/text_encoders/text_encoder.py:74:__init__] Instantiating text encoder model...
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpoint_db.py:171:path] Downloading checkpoint Qwen/Qwen2.5-VL-7B-Instruct(7219c6c7-f878-4137-bbdb-76842ea85e70)
+[11-12 22:02:01|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpoint_db.py:131:_download] Downloading checkpoint from Hugging Face with {'repo_id': 'nvidia/Cosmos-Reason1-7B', 'repo_type': 'model', 'revision': '3210bec0495fdc7a8d3dbb8d58da5711eab4b423', 'allow_patterns': ['*']}
+[11-12 22:02:02|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/reason1/tokenizer/processor.py:75:__init__] Successfully loaded processor from local cache
+[11-12 22:02:02|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/reason1/models/vlm_base.py:116:__init__] Setting torch default dtype from torch.float32 to torch.bfloat16
+[11-12 22:02:02|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/reason1/models/vlm_base.py:123:__init__] Reset torch default dtype to torch.float32
+[11-12 22:02:02|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/text_encoders/text_encoder.py:84:__init__] Loading checkpoint from s3://bucket/cosmos_reasoning1/sft_exp700/sft_exp721-1_qwen7b_tl_721_5vs5_s3_balanced_n32_resume_16k/checkpoints/iter_000016000/model/.
+[11-12 22:02:02|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpoint_db.py:171:path] Downloading checkpoint nvidia/Cosmos-Reason1.1-7B(cb3e3ffa-7b08-4c34-822d-61c7aa31a14f)
+[11-12 22:02:02|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpoint_db.py:131:_download] Downloading checkpoint from Hugging Face with {'repo_id': 'nvidia/Cosmos-Reason1-7B', 'repo_type': 'model', 'revision': '3210bec0495fdc7a8d3dbb8d58da5711eab4b423', 'allow_patterns': ['*']}
+[11-12 22:02:30|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/text_encoders/text_encoder.py:113:__init__] Finished loading checkpoint from /home/nvidia/.cache/huggingface/hub/models--nvidia--Cosmos-Reason1-7B/snapshots/3210bec0495fdc7a8d3dbb8d58da5711eab4b423.
+[11-12 22:02:30|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/text_encoders/text_encoder.py:116:__init__] Text encoder model instantiated
+[11-12 22:02:30|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/models/vid2vid_model_control_vace_rectified_flow.py:69:__init__] MinimalV4LVGControlVaceDiT(
+  (x_embedder): PatchEmbed(
+    (proj): Sequential(
+      (0): Rearrange('b c (t r) (h m) (w n) -> b t h w (c r m n)', r=1, m=2, n=2)
+      (1): Linear(in_features=72, out_features=2048, bias=False)
+    )
+  )
+  (pos_embedder): VideoRopePosition3DEmb()
+  (t_embedder): Sequential(
+    (0): Timesteps()
+    (1): TimestepEmbedding(
+      (linear_1): Linear(in_features=2048, out_features=2048, bias=False)
+      (activation): SiLU()
+      (linear_2): Linear(in_features=2048, out_features=6144, bias=False)
+    )
+  )
+  (blocks): ModuleList(
+    (0-27): 28 x CheckpointWrapper(
+      (_checkpoint_wrapped_module): ControlAwareDiTBlock(
+        (layer_norm_self_attn): LayerNorm((2048,), eps=1e-06, elementwise_affine=False)
+        (self_attn): Attention(
+          (q_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (q_norm): RMSNorm()
+          (k_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (k_norm): RMSNorm()
+          (v_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (v_norm): Identity()
+          (output_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (output_dropout): Identity()
+          (attn_op): MinimalA2AAttnOp()
+        )
+        (layer_norm_cross_attn): LayerNorm((2048,), eps=1e-06, elementwise_affine=False)
+        (cross_attn): Attention(
+          (q_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (q_norm): RMSNorm()
+          (k_proj): Linear(in_features=1024, out_features=2048, bias=False)
+          (k_norm): RMSNorm()
+          (v_proj): Linear(in_features=1024, out_features=2048, bias=False)
+          (v_norm): Identity()
+          (output_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (output_dropout): Identity()
+          (attn_op): MinimalA2AAttnOp()
+        )
+        (layer_norm_mlp): LayerNorm((2048,), eps=1e-06, elementwise_affine=False)
+        (mlp): GPT2FeedForward(
+          (activation): GELU(approximate='none')
+          (layer1): Linear(in_features=2048, out_features=8192, bias=False)
+          (layer2): Linear(in_features=8192, out_features=2048, bias=False)
+        )
+        (adaln_modulation_self_attn): Sequential(
+          (0): SiLU()
+          (1): Linear(in_features=2048, out_features=256, bias=False)
+          (2): Linear(in_features=256, out_features=6144, bias=False)
+        )
+        (adaln_modulation_cross_attn): Sequential(
+          (0): SiLU()
+          (1): Linear(in_features=2048, out_features=256, bias=False)
+          (2): Linear(in_features=256, out_features=6144, bias=False)
+        )
+        (adaln_modulation_mlp): Sequential(
+          (0): SiLU()
+          (1): Linear(in_features=2048, out_features=256, bias=False)
+          (2): Linear(in_features=256, out_features=6144, bias=False)
+        )
+      )
+    )
+  )
+  (final_layer): CheckpointWrapper(
+    (_checkpoint_wrapped_module): CheckpointWrapper(
+      (_checkpoint_wrapped_module): CheckpointWrapper(
+        (_checkpoint_wrapped_module): FinalLayer(
+          (layer_norm): LayerNorm((2048,), eps=1e-06, elementwise_affine=False)
+          (linear): Linear(in_features=2048, out_features=64, bias=False)
+          (adaln_modulation): Sequential(
+            (0): SiLU()
+            (1): Linear(in_features=2048, out_features=256, bias=False)
+            (2): Linear(in_features=256, out_features=4096, bias=False)
+          )
+        )
+      )
+    )
+  )
+  (t_embedding_norm): RMSNorm()
+  (crossattn_proj): Sequential(
+    (0): Linear(in_features=100352, out_features=1024, bias=True)
+    (1): GELU(approximate='none')
+  )
+  (control_embedder): PatchEmbed(
+    (proj): Sequential(
+      (0): Rearrange('b c (t r) (h m) (w n) -> b t h w (c r m n)', r=1, m=2, n=2)
+      (1): Linear(in_features=520, out_features=2048, bias=False)
+    )
+  )
+  (control_blocks): ModuleList(
+    (0): CheckpointWrapper(
+      (_checkpoint_wrapped_module): ControlEncoderDiTBlock(
+        (layer_norm_self_attn): LayerNorm((2048,), eps=1e-06, elementwise_affine=False)
+        (self_attn): Attention(
+          (q_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (q_norm): RMSNorm()
+          (k_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (k_norm): RMSNorm()
+          (v_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (v_norm): Identity()
+          (output_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (output_dropout): Identity()
+          (attn_op): MinimalA2AAttnOp()
+        )
+        (layer_norm_cross_attn): LayerNorm((2048,), eps=1e-06, elementwise_affine=False)
+        (cross_attn): Attention(
+          (q_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (q_norm): RMSNorm()
+          (k_proj): Linear(in_features=1024, out_features=2048, bias=False)
+          (k_norm): RMSNorm()
+          (v_proj): Linear(in_features=1024, out_features=2048, bias=False)
+          (v_norm): Identity()
+          (output_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (output_dropout): Identity()
+          (attn_op): MinimalA2AAttnOp()
+        )
+        (layer_norm_mlp): LayerNorm((2048,), eps=1e-06, elementwise_affine=False)
+        (mlp): GPT2FeedForward(
+          (activation): GELU(approximate='none')
+          (layer1): Linear(in_features=2048, out_features=8192, bias=False)
+          (layer2): Linear(in_features=8192, out_features=2048, bias=False)
+        )
+        (adaln_modulation_self_attn): Sequential(
+          (0): SiLU()
+          (1): Linear(in_features=2048, out_features=256, bias=False)
+          (2): Linear(in_features=256, out_features=6144, bias=False)
+        )
+        (adaln_modulation_cross_attn): Sequential(
+          (0): SiLU()
+          (1): Linear(in_features=2048, out_features=256, bias=False)
+          (2): Linear(in_features=256, out_features=6144, bias=False)
+        )
+        (adaln_modulation_mlp): Sequential(
+          (0): SiLU()
+          (1): Linear(in_features=2048, out_features=256, bias=False)
+          (2): Linear(in_features=256, out_features=6144, bias=False)
+        )
+        (before_proj): Linear(in_features=2048, out_features=2048, bias=True)
+        (after_proj): Linear(in_features=2048, out_features=2048, bias=True)
+      )
+    )
+    (1-3): 3 x CheckpointWrapper(
+      (_checkpoint_wrapped_module): ControlEncoderDiTBlock(
+        (layer_norm_self_attn): LayerNorm((2048,), eps=1e-06, elementwise_affine=False)
+        (self_attn): Attention(
+          (q_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (q_norm): RMSNorm()
+          (k_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (k_norm): RMSNorm()
+          (v_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (v_norm): Identity()
+          (output_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (output_dropout): Identity()
+          (attn_op): MinimalA2AAttnOp()
+        )
+        (layer_norm_cross_attn): LayerNorm((2048,), eps=1e-06, elementwise_affine=False)
+        (cross_attn): Attention(
+          (q_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (q_norm): RMSNorm()
+          (k_proj): Linear(in_features=1024, out_features=2048, bias=False)
+          (k_norm): RMSNorm()
+          (v_proj): Linear(in_features=1024, out_features=2048, bias=False)
+          (v_norm): Identity()
+          (output_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (output_dropout): Identity()
+          (attn_op): MinimalA2AAttnOp()
+        )
+        (layer_norm_mlp): LayerNorm((2048,), eps=1e-06, elementwise_affine=False)
+        (mlp): GPT2FeedForward(
+          (activation): GELU(approximate='none')
+          (layer1): Linear(in_features=2048, out_features=8192, bias=False)
+          (layer2): Linear(in_features=8192, out_features=2048, bias=False)
+        )
+        (adaln_modulation_self_attn): Sequential(
+          (0): SiLU()
+          (1): Linear(in_features=2048, out_features=256, bias=False)
+          (2): Linear(in_features=256, out_features=6144, bias=False)
+        )
+        (adaln_modulation_cross_attn): Sequential(
+          (0): SiLU()
+          (1): Linear(in_features=2048, out_features=256, bias=False)
+          (2): Linear(in_features=256, out_features=6144, bias=False)
+        )
+        (adaln_modulation_mlp): Sequential(
+          (0): SiLU()
+          (1): Linear(in_features=2048, out_features=256, bias=False)
+          (2): Linear(in_features=256, out_features=6144, bias=False)
+        )
+        (after_proj): Linear(in_features=2048, out_features=2048, bias=True)
+      )
+    )
+  )
+)
+[11-12 22:02:31|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/misc.py:268:__exit__] Time spent on instantiate model: 31.0990 seconds
+[11-12 22:02:31|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/utils/model_loader.py:131:load_model_state_dict_from_checkpoint] Loading model cached locally from /home/nvidia/.cache/huggingface/hub/models--nvidia--Cosmos-Transfer2.5-2B/snapshots/bd963eabcfc2d61dc4ea365cacf41d45ac480aa5/general/edge/ecd0ba00-d598-4f94-aa09-e8627899c431_ema_bf16.pt
+[11-12 22:02:35|CRITICAL|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/models/text2world_model_rectified_flow.py:799:load_state_dict] load model in non-strict mode
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.0.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.0.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.0.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.0.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.1.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.1.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.1.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.1.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.2.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.2.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.2.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.2.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.3.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.3.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.3.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.3.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.4.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.4.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.4.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.4.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.5.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.5.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.5.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.5.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.6.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.6.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.6.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.6.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.7.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.7.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.7.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.7.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.8.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.8.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.8.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.8.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.9.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.9.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.9.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.9.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.10.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.10.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.10.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.10.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.11.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.11.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.11.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.11.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.12.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.12.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.12.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.12.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.13.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.13.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.13.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.13.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.14.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.14.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.14.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.14.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.15.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.15.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.15.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.15.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.16.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.16.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.16.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.16.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.17.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.17.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.17.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.17.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.18.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.18.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.18.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.18.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.19.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.19.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.19.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.19.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.20.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.20.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.20.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.20.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.21.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.21.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.21.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.21.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.22.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.22.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.22.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.22.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.23.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.23.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.23.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.23.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.24.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.24.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.24.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.24.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.25.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.25.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.25.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.25.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.26.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.26.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.26.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.26.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.27.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.27.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.27.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key blocks.27.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key t_embedding_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key control_blocks.0.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key control_blocks.0.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key control_blocks.0.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key control_blocks.0.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key control_blocks.1.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key control_blocks.1.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key control_blocks.1.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key control_blocks.1.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key control_blocks.2.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key control_blocks.2.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key control_blocks.2.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key control_blocks.2.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key control_blocks.3.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key control_blocks.3.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key control_blocks.3.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:35|WARNING|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/checkpointer.py:451:non_strict_load_model] Skipping key control_blocks.3.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[11-12 22:02:36|CRITICAL|cosmos_transfer2_5/cosmos_transfer2/_src/predict2/models/text2world_model_rectified_flow.py:800:load_state_dict] [RANK 0]_IncompatibleKeys(missing_keys=[], unexpected_keys=[], incorrect_shapes=[])
+[11-12 22:02:36|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/inference/utils.py:1007:compile_tokenizer_if_enabled] Tokenizer compilation disabled
+[11-12 22:02:36|INFO|cosmos_transfer2_5/cosmos_transfer2/inference.py:102:__init__] Found 1 hint keys across all samples
+[11-12 22:02:36|INFO|cosmos_transfer2_5/cosmos_transfer2/inference.py:112:__init__] Saved config to outputs/color_change/config.yaml
+[11-12 22:02:36|INFO|cosmos_transfer2_5/cosmos_transfer2/inference.py:120:generate] Generating 1 samples: ['color_change']
+[11-12 22:02:36|INFO|cosmos_transfer2_5/cosmos_transfer2/inference.py:124:generate] [1/1] Processing sample color_change
+[11-12 22:02:36|DEBUG|cosmos_transfer2_5/cosmos_transfer2/inference.py:140:_generate_sample] InferenceArguments(name='color_change' prompt_path=PosixPath('/home/nvidia/workspace/cosmos-robotics-sa-training/prompts/prompt_color.txt') prompt='A realistic, static full-body shot of a young man standing in the center of a spacious, modern atrium. He has short dark hair and is dressed casually in a red t-shirt, loose black pants, and white sneakers, with an ID badge clipped to his waistband. He faces the camera directly and waves his right hand continuously in a friendly greeting. The surrounding space is bright and open, featuring a high industrial-style ceiling with exposed white beams and large, angular black structural supports. The floor is polished light grey concrete, reflecting the artificial overhead lighting. In the background, a mezzanine level with glass railings is visible, along with several modern wooden benches and tables scattered throughout the area.' negative_prompt='The video captures a game playing, with bad crappy graphics and cartoonish frames. It represents a recording of old outdated games. The lighting looks very fake. The textures are very raw and basic. The geometries are very primitive. The images are very pixelated and of poor CG quality. There are many subtitles in the footage. Overall, the video is unrealistic at all.' seed=2025 guidance=3 video_path=PosixPath('/home/nvidia/workspace/cosmos-robotics-sa-training/assets/wave.mp4') image_context_path=None num_conditional_frames=1 resolution='720' sigma_max=None num_video_frames_per_chunk=93 num_steps=35 show_control_condition=False show_input=False keep_input_resolution=True edge=EdgeConfig(control_path=PosixPath('/home/nvidia/workspace/cosmos-robotics-sa-training/assets/edge.mp4'), control_weight=1.0, mask_path=None, mask_prompt=None, preset_edge_threshold='medium') depth=None vis=None seg=None)
+[11-12 22:02:36|INFO|cosmos_transfer2_5/cosmos_transfer2/inference.py:152:_generate_sample] Saved arguments to outputs/color_change/color_change.json
+[11-12 22:02:36|INFO|cosmos_transfer2_5/cosmos_transfer2/inference.py:156:_generate_sample] Running guardrail check on prompt...
+[11-12 22:02:36|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/common/core.py:58:run_safety_check] Running guardrail: BLOCKLIST
+[11-12 22:02:38|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/common/core.py:58:run_safety_check] Running guardrail: QWEN3GUARD
+[11-12 22:02:39|SUCCESS|cosmos_transfer2_5/cosmos_transfer2/inference.py:166:_generate_sample] Passed guardrail on prompt
+[11-12 22:02:39|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/common/core.py:58:run_safety_check] Running guardrail: BLOCKLIST
+[11-12 22:02:39|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/common/core.py:58:run_safety_check] Running guardrail: QWEN3GUARD
+[11-12 22:02:39|SUCCESS|cosmos_transfer2_5/cosmos_transfer2/inference.py:179:_generate_sample] Passed guardrail on negative prompt
+[11-12 22:02:39|INFO|cosmos_transfer2_5/cosmos_transfer2/inference.py:184:_generate_sample] Processing the following paths: {'edge': '/home/nvidia/workspace/cosmos-robotics-sa-training/assets/edge.mp4', 'edge_mask': None, 'edge_mask_prompt': None}
+[11-12 22:02:39|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/inference/inference_pipeline.py:312:generate_img2world] Loading input video...
+[11-12 22:02:39|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/inference/utils.py:204:read_video_or_image_into_frames_BCTHW] Reading video from /home/nvidia/workspace/cosmos-robotics-sa-training/assets/wave.mp4
+[11-12 22:02:40|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/inference/utils.py:243:read_video_or_image_into_frames_BCTHW] Loaded input tensor with shape (1, 3, 61, 720, 1280) value 0, 255
+[11-12 22:02:40|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/inference/inference_pipeline.py:322:generate_img2world] Computing prompt text embeddings...
+[11-12 22:02:40|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/inference/inference_pipeline.py:330:generate_img2world] Computing negative prompt text embeddings...
+[11-12 22:02:40|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/inference/inference_pipeline.py:342:generate_img2world] Processing image context if available...
+[11-12 22:02:40|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/inference/utils.py:330:read_and_process_image_context] No image context provided.
+[11-12 22:02:40|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/inference/inference_pipeline.py:353:generate_img2world] Loading control inputs...
+[11-12 22:02:40|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/inference/utils.py:204:read_video_or_image_into_frames_BCTHW] Reading video from /home/nvidia/workspace/cosmos-robotics-sa-training/assets/edge.mp4
+[11-12 22:02:40|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/inference/utils.py:243:read_video_or_image_into_frames_BCTHW] Loaded input tensor with shape (1, 3, 61, 720, 1280) value 0, 255
+[11-12 22:02:40|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/inference/inference_pipeline.py:377:generate_img2world] Generating chunk 1/1
+[11-12 22:02:40|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/inference/inference_pipeline.py:439:generate_img2world] Seed: 584845
+[11-12 22:02:40|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/models/vid2vid_model_control_vace_rectified_flow.py:232:get_velocity_fn_from_batch] num_conditional_frames: 0 is set by data_batch[NUM_CONDITIONAL_FRAMES_KEY]
+[11-12 22:09:09|INFO|cosmos_transfer2_5/cosmos_transfer2/_src/transfer2/inference/inference_pipeline.py:530:generate_img2world] Average time per chunk: 385.74325890804175
+[11-12 22:09:09|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/easy_io/handlers/imageio_video_handler.py:163:dump_to_fileobj] mimsave_kwargs: {'fps': 60, 'quality': 5, 'macro_block_size': 1, 'ffmpeg_params': ['-s', '1280x720'], 'output_params': ['-f', 'mp4']}
+[11-12 22:09:11|INFO|cosmos_transfer2_5/cosmos_transfer2/inference.py:238:_generate_sample] edge control video saved to outputs/color_change/color_change_control_edge.mp4
+[11-12 22:09:11|INFO|cosmos_transfer2_5/cosmos_transfer2/inference.py:242:_generate_sample] Running guardrail check on video...
+[11-12 22:09:11|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/common/core.py:58:run_safety_check] Running guardrail: VIDEOCONTENTSAFETYFILTER
+[11-12 22:09:12|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/video_content_safety_filter/video_content_safety_filter.py:98:_to_cuda_if_offload] Move video content safety filter to GPU
+[11-12 22:09:14|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/video_content_safety_filter/video_content_safety_filter.py:104:_to_cpu_if_offload] Offload video content safety filter to CPU
+[11-12 22:09:14|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/video_content_safety_filter/video_content_safety_filter.py:153:is_safe_frames] Frames data: {
+    "is_safe": true,
+    "frame_scores": [
+        {
+            "frame_number": 0,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 1,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 2,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 3,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 4,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 5,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 6,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 7,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 8,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 9,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 10,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 11,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 12,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 13,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 14,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 15,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 16,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 17,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 18,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 19,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 20,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 21,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 22,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 23,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 24,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 25,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 26,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 27,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 28,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 29,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 30,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 31,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 32,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 33,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 34,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 35,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 36,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 37,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 38,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 39,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 40,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 41,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 42,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 43,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 44,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 45,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 46,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 47,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 48,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 49,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 50,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 51,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 52,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 53,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 54,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 55,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 56,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 57,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 58,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 59,
+            "class": "Safe"
+        },
+        {
+            "frame_number": 60,
+            "class": "Safe"
+        }
+    ]
+}
+[11-12 22:09:14|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/common/core.py:73:postprocess] Running guardrail: RETINAFACEFILTER
+[11-12 22:09:14|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/face_blur_filter/face_blur_filter.py:174:postprocess] Move face blur filter to GPU
+[11-12 22:09:18|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/auxiliary/guardrail/face_blur_filter/face_blur_filter.py:210:postprocess] Offload face blur filter to CPU
+[11-12 22:09:18|SUCCESS|cosmos_transfer2_5/cosmos_transfer2/inference.py:252:_generate_sample] Passed guardrail on generated video
+[11-12 22:09:19|DEBUG|cosmos_transfer2_5/cosmos_transfer2/_src/imaginaire/utils/easy_io/handlers/imageio_video_handler.py:163:dump_to_fileobj] mimsave_kwargs: {'fps': 60, 'quality': 5, 'macro_block_size': 1, 'ffmpeg_params': ['-s', '1280x720'], 'output_params': ['-f', 'mp4']}
+[11-12 22:09:20|SUCCESS|cosmos_transfer2_5/cosmos_transfer2/inference.py:266:_generate_sample] Generated video saved to outputs/color_change/color_change.mp4

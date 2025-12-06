@@ -63,17 +63,17 @@ echo "[7/7] Installing SAM3..."
 
 cd ..
 
-SAM3_DIR="sam3"
-SAM3_URL="https://github.com/facebookresearch/sam3.git"
+SAM2_DIR="sam2"
+SAM2_URL="https://github.com/facebookresearch/sam2.git"
 
-if [ -d "$SAM3_DIR" ]; then
+if [ -d "$SAM2_DIR" ]; then
   echo " - $SAM2_DIR already exists, skipping clone."
 else
   echo " - Cloning SAM2..."
-  git clone "$SAM3_URL" "$SAM3_DIR"
+  git clone "$SAM2_URL" "$SAM2_DIR"
 fi
 
-cd "$SAM3_DIR"
+cd "$SAM2_DIR"
 uv pip install -e .
 
 # Model directory
