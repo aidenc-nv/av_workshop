@@ -166,11 +166,15 @@ def write_to_csv(rows, output_csv: str = "outputs/omniverse_generations_av/video
 
 
 if __name__ == "__main__":
-    filename = "av_realistic_wooden_road_7_6_4_f_0_0"
+    filename = "av_vehicle_van_7_0_0_f_0_10"
     print(parse_config_from_filename(filename))
 
     # configuration_utils()
-    # configuration_utils()
+
+
+    generation_location="outputs/av_vehicle"
+    weather_configs=["van", "small_car", "bus", "suv", "lots_of_people"]
+    configuration_utils(generation_location, weather_configs)
 
 
 
@@ -185,4 +189,4 @@ if __name__ == "__main__":
     )
 
     rows = rows1 + rows2
-    write_to_csv(rows, output_csv="outputs/av_realistic_index.csv")
+    # write_to_csv(rows, output_csv="outputs/av_realistic_index.csv")

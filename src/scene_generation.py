@@ -53,7 +53,7 @@ def create_entry_jsonl(
             "control_path": os.path.join(control_weight_location, "seg.mp4")
         }
         if seg_mask:
-            entry["seg"]["mask_path"] = os.path.join(control_weight_location, "seg_mask.mp4")
+            entry["seg"]["mask_path"] = os.path.join(control_weight_location, seg_mask)
     
 
     if depth:
@@ -215,11 +215,86 @@ def av_generate_realistic_configurations(
                 
     
     write_entries_jsonl(scripts_output_dir, full_configs)
+
+
+
+def av_vehicle_modification(
+    video_location="../av_data/output_fixed.mp4", 
+    location="../av_data", 
+    name="av_vehicle"):
+    
+    '''
+    Running the script:
+    - For single GPU: python cosmos_transfer2_5/examples/inference.py -i scripts/av_configs.jsonl -o outputs/av_vehicle --disable-guardrails
+    - For Multi GPU: torchrun --nproc_per_node=8 --master_port=12341 cosmos_transfer2_5/examples/inference.py -i scripts/av_configs.jsonl -o outputs/av_vehicle --disable-guardrails
+    '''
+
+    scripts_output_dir = os.path.join("scripts/av_configs.jsonl")
+    generation_output_dir = os.path.join("outputs/", name)
+    os.makedirs(generation_output_dir, exist_ok=True)
+
+
+
+    weather = ["bike", "van", "small_car", "bus", "truck", "suv", "hatchback", "lots_of_people"]
+    weather = ["van", "small_car", "bus", "suv", "lots_of_people"]
+    # weather = ["fog", "morning_sun"]
+    guidance = [3, 7]
+    configurations = [
+        # {"depth": 1},
+        {"edge": 1},
+        {"edge": 1, "depth": 0.9},
+        {"edge": 1, "depth": 0.9, "seg": 1},
+        {"edge": 1, "depth": 0.9, "seg": 1, "seg_mask": "clip_0_mask.mp4"},
+        {"edge": 1, "depth": 0.9, "seg": 0.5},
+        {"edge": 1, "depth": 0.9, "seg": 0.5, "seg_mask": "clip_0_mask.mp4"},
+        {"edge": 0.9, "depth": 1.0},
+        {"edge": 0.5, "depth": 1.0},
+        {"edge": 0.5, "depth": 1.0, "seg": 0.4},
+        {"edge": 0.5, "depth": 1.0, "seg": 0.4, "seg_mask": "clip_0_mask.mp4"},
+        {"edge": 0.5, "depth": 1.0, "seg": 0.6},
+        # {"edge": 0.5, "depth": 1.0, "seg": 0.6, "seg_mask": "clip_0_mask.mp4"},
+        {"edge": 0.5, "depth": 0.5, "seg": 0.7, "seg_mask": "clip_0_mask.mp4"},
+        {"edge": 0.5, "depth": 0.5, "seg": 0.8, "seg_mask": "clip_0_mask.mp4"},
+        {"edge": 0.4, "depth": 1.0},
+        {"edge": 1.0, "depth": 0.5},
+        {"edge": 0.6, "seg": 0.4},
+        {"edge": 0.6, "seg": 0.4, "seg_mask": "clip_0_mask.mp4"},
+    ]
+
+    full_configs = []
+    name_overlap = []
+
+    for w in weather:
+        for g in guidance:
+            for c in configurations:
+                new_config, entry_name = create_entry_jsonl(
+                        name=name,
+                        guidance=g,
+                        prompt_location=os.path.join(location, "clip_0_easier_prompts/"),
+                        prompt_type=w,
+                        video_location=video_location,
+                        control_weight_location=location,
+                        edge=c.get("edge", 0),
+                        edge_path=c.get("edge_path", None),
+                        seg=c.get("seg", 0),
+                        seg_mask=c.get("seg_mask", None),
+                        vis=c.get("vis", 0),
+                        depth=c.get("depth", 0),
+                        generation_output_dir=generation_output_dir
+                    )
+                if new_config:
+                    full_configs.append(new_config)
+                    assert entry_name not in name_overlap, f"Error: entry name {name_overlap} already exists"
+                    name_overlap.append(entry_name)
+                
+    
+    write_entries_jsonl(scripts_output_dir, full_configs)
     
 
 
 if __name__ == "__main__":
-    generate_omniverse_configurations()
+    # generate_omniverse_configurations()
+    av_vehicle_modification()
     # av_generate_realistic_configurations()
 
 
